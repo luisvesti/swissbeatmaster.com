@@ -109,6 +109,7 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">5.7.2024 20:00</span>
 					<span class="info">Tiergarten, Mels SG</span>
+					<span class="past">Bereits vorbei</span>
 				</div>
 	
 			</div>
@@ -126,6 +127,7 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">18.10.2024 21:00</span>
 					<span class="info">Bluebox, Niederurnen GL</span>
+					<span class="past">Bereits vorbei</span>
 				</div>
 	
 			</div>
@@ -143,6 +145,7 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">21.12.2024 21:00</span>
 					<span class="info">Bluebox, Niederurnen GL</span>
+					<span class="countdown" id="countdown-text"></span>
 				</div>
 	
 			</div>
@@ -160,6 +163,7 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">30.12.2024 21:00</span>
 					<span class="info">Bluebox, Niederurnen GL</span>
+					<span class="upcoming">Bevorstehend</span>
 				</div>
 	
 			</div>
@@ -177,6 +181,7 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">17.1.2025 21:00</span>
 					<span class="info">Bluebox, Niederurnen GL</span>
+					<span class="upcoming">Bevostehend</span>
 				</div>
 	
 			</div>
@@ -194,5 +199,36 @@
 	</div>
 
 </body>
+
+<!-- JAVASCRIPT -->
+
+<script>
+	// Ziel-Datum und Zeit für den Countdown (z. B. Silvester)
+	var targetDate = new Date('2025-01-01T00:00:00').getTime();
+  
+	// Aktualisiere den Countdown alle Sekunde
+	var countdownInterval = setInterval(function() {
+	  // Aktuelles Datum und Zeit
+	  var now = new Date().getTime();
+  
+	  // Berechne die Differenz zwischen dem Ziel-Datum und der aktuellen Zeit
+	  var distance = targetDate - now;
+  
+	  // Berechne Tage, Stunden, Minuten und Sekunden
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+	  // Zeige den Countdown im HTML-Dokument an
+	  document.getElementById('countdown-text').innerHTML = days + ' Tage, ' + hours + ' Stunden, ' + minutes + ' Minuten, ' + seconds + ' Sekunden';
+  
+	  // Wenn der Countdown beendet ist, zeige eine Nachricht an und stoppe das Intervall
+	  if (distance < 0) {
+		clearInterval(countdownInterval);
+		document.getElementById('countdown-text').innerHTML = 'Countdown abgelaufen!';
+	  }
+	}, 1000); // Intervall in Millisekunden (hier alle Sekunde)
+</script>
 
 </html>
