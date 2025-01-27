@@ -145,7 +145,7 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">21.12.2024 21:00</span>
 					<span class="info">Bluebox, Niederurnen GL</span>
-					<span class="countdown" id="countdown-text"></span>
+					<span class="past">Bereits vorbei</span>
 				</div>
 	
 			</div>
@@ -163,7 +163,7 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">30.12.2024 21:00</span>
 					<span class="info">Bluebox, Niederurnen GL</span>
-					<span class="upcoming">Bevorstehend</span>
+					<span class="past">Bereits vorbei</span>
 				</div>
 	
 			</div>
@@ -181,11 +181,29 @@
 					<p>DJ SWISS BEAT MASTER live!</p>
 					<span class="info">17.1.2025 21:00</span>
 					<span class="info">Bluebox, Niederurnen GL</span>
-					<span class="upcoming">Bevostehend</span>
+					<span class="past">Bereits vorbei</span>
 				</div>
 	
 			</div>
 		
+			<!-- OZ ViWa Schulball -->
+
+			<div class="regular-box">
+			
+				<div class="regular-box-img">
+					<img src="res/sternen.png">
+				</div>
+			
+				<div class="regular-box-text">
+					<h1>Oberstufe Vilters-Wangs Schulball</h1>
+					<p>DJ SWISS BEAT MASTER live!</p>
+					<span class="info">15.3.2025</span>
+					<span class="info">Sternensaal, Vilters-Wangs SG</span>
+					<span class="upcoming">Bevorstehend</span>
+				</div>
+	
+			</div>
+
 		</div>
 
 	</div>
@@ -194,41 +212,10 @@
 
 	<div class="footer">
 		<p>Website erstellt von Luis Vesti | <a href="https://luisvesti.com" style="color:#ca1bff;">luisvesti.com</a></p>
-		<span>©️ 2024 swissbeatmaster.com</span>
+		<span>©️ 2025 swissbeatmaster.com</span>
 		<span>All rights reserved.</span>
 	</div>
 
 </body>
-
-<!-- JAVASCRIPT -->
-
-<script>
-	// Ziel-Datum und Zeit für den Countdown (z. B. Silvester)
-	var targetDate = new Date('2025-01-01T00:00:00').getTime();
-  
-	// Aktualisiere den Countdown alle Sekunde
-	var countdownInterval = setInterval(function() {
-	  // Aktuelles Datum und Zeit
-	  var now = new Date().getTime();
-  
-	  // Berechne die Differenz zwischen dem Ziel-Datum und der aktuellen Zeit
-	  var distance = targetDate - now;
-  
-	  // Berechne Tage, Stunden, Minuten und Sekunden
-	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-	  // Zeige den Countdown im HTML-Dokument an
-	  document.getElementById('countdown-text').innerHTML = days + ' Tage, ' + hours + ' Stunden, ' + minutes + ' Minuten, ' + seconds + ' Sekunden';
-  
-	  // Wenn der Countdown beendet ist, zeige eine Nachricht an und stoppe das Intervall
-	  if (distance < 0) {
-		clearInterval(countdownInterval);
-		document.getElementById('countdown-text').innerHTML = 'Countdown abgelaufen!';
-	  }
-	}, 1000); // Intervall in Millisekunden (hier alle Sekunde)
-</script>
 
 </html>
