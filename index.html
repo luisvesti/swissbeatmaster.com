@@ -314,6 +314,12 @@
             overflow: hidden;
             animation: gradientShift 4s ease infinite;
         }
+        .reference-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
         .reference-logo::before {
             content: '';
             position: absolute;
@@ -764,9 +770,7 @@
                     </div>
                     <div class="music-content">
                         <h3 class="music-title">Swiss Hits</h3>
-                        <p class="music-description">Ob Pop, Rock oder Volksmusik mit den besten Sounds aus der Schweiz sorge ich für echte Heimatgefühle auf der Tanzfläche. Schweizer Musik, neu gedacht: tanzbar, überraschend, unvergesslich!
-
-</p>
+                        <p class="music-description">Ob Pop, Rock oder Volksmusik mit den besten Sounds aus der Schweiz sorge ich für echte Heimatgefühle auf der Tanzfläche. Schweizer Musik, neu gedacht: tanzbar, überraschend, unvergesslich!</p>
                         <div class="music-stats">
                             <div class="stat">
                                 <div class="stat-value">200+</div>
@@ -878,12 +882,12 @@
                 <h3 class="reference-name">Pumptrack Eröffnung Sargans</h3>
                 <p class="reference-quote">"Action auf dem Pumptrack, Party vor der Bühne, was für ein Tag!"</p>
             </div>
- <div class="reference-item">
+            <div class="reference-item">
                 <div class="reference-logo">
                     <img src="bilder/schenkbruhin.jpg" alt="Festival Logo">
                 </div>
                 <h3 class="reference-name">Schenk Bruhin AG</h3>
-                <p class="reference-quote">"Dario hat den Beat geliefert, wir den Rest, zusammen wurde’s legendär. Die Firmenfeier mit ihm? Einfach next level."</p>
+                <p class="reference-quote">"Dario hat den Beat geliefert, wir den Rest, zusammen wurde's legendär. Die Firmenfeier mit ihm? Einfach next level."</p>
             </div>
             <div class="reference-item">
                 <div class="reference-logo">
@@ -891,6 +895,22 @@
                 </div>
                 <h3 class="reference-name">Offene Jugendarbeit Mels</h3>
                 <p class="reference-quote">"Wenn er auflegt, bleibt keiner sitzen, und danach fragt jeder: ‚Wann spielt der wieder?!"</p>
+            </div>
+            <!-- NEU: SIGA Messe -->
+            <div class="reference-item">
+                <div class="reference-logo">
+                    <img src="bilder/siga.jpg" alt="SIGA Messe Logo">
+                </div>
+                <h3 class="reference-name">SIGA Messe 2026</h3>
+                <p class="reference-quote">"Die SIGA 2026 in Mels wurde mit DJ Swiss Beat Master zu einem unvergesslichen Erlebnis – Stimmung, die man nicht so schnell vergisst!"</p>
+            </div>
+            <!-- NEU: Geburtstagsparty -->
+            <div class="reference-item">
+                <div class="reference-logo">
+                    <img src="bilder/geburtstag.jpg" alt="Geburtstagsparty">
+                </div>
+                <h3 class="reference-name">Geburtstagsparty Pfäffikon</h3>
+                <p class="reference-quote">"Er hat unsere Party in eine richtige Clubnacht verwandelt. Alle Gäste waren begeistert – der perfekte Soundtrack für unseren Special Night!"</p>
             </div>
         </div>
     </section>
@@ -960,8 +980,6 @@
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
-            // In a real implementation, you would send this data to a server
-            // For now, we'll just show an alert
             alert('Vielen Dank für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden.');
             form.reset();
         }
